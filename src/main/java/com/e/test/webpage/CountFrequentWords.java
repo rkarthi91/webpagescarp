@@ -21,6 +21,7 @@ public class CountFrequentWords implements CommandLineRunner {
 
     Map<String, Integer> singleWordMap = new HashMap<>();
     Map<String, Integer> twoWordPairMap = new HashMap<>();
+    String rootUrl = "https://www.314e.com/";
 
     public static void main(String[] args) {
         SpringApplication.run(CountFrequentWords.class, args);
@@ -30,12 +31,12 @@ public class CountFrequentWords implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         // Read website content using jsoup library.
-        Document doc = Jsoup.connect("https://www.314e.com").get();
+        Document doc = Jsoup.connect(rootUrl).get();
 
         // Extract 314e related hyperlink from this webpage using jsoup selector to ignore external resources
         Set<String> hyperlinkSet =
-                doc.select("a[href*=www.314e.com/]").stream().filter(element -> {
-                    return !element.attr("abs:href").toString().equals("https://www.314e.com/");
+                doc.select("a[href*="+rootUrl+"]").stream().filter(element -> {
+                    return !element.attr("abs:href").toString().equals(rootUrl);
                 }).map(element -> element.attr("href"))
                         .collect(Collectors.toSet());
 
@@ -50,10 +51,10 @@ public class CountFrequentWords implements CommandLineRunner {
         }
 
         // Print single word and two pair words top 10 frequently repeated words
-        System.out.println("----------- Single word Pair -----------------");
+        LOG.info("----------- Single word Pair -----------------");
         printTop10FrequentWords(singleWordMap);
 
-        System.out.println("----------- Two word Pair -----------------");
+        LOG.info("----------- Two word Pair -----------------");
         printTop10FrequentWords(twoWordPairMap);
 
     }
@@ -68,7 +69,7 @@ public class CountFrequentWords implements CommandLineRunner {
             @Override
             public void accept(Map.Entry<String, Integer> stringIntegerEntry) {
                 if (stringIntegerEntry.getKey() != null && stringIntegerEntry.getKey().trim().length() > 0)
-                    LOG.debug("{} - {}", stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
+                    LOG.info("{} - {}", stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
             }
         });
     }
@@ -78,10 +79,9 @@ public class CountFrequentWords implements CommandLineRunner {
     */
     private void populateSingleWordFromWebPageContent(String url) throws IOException {
 
-        System.out.println(url);
-        LOG.debug("Url - {}", url);
+        LOG.info("Url - {}", url);
 
-        // Ignore http erros to avoid http client and server side erros..  ../blog results 404 error so added to ignore it.
+        // Ignore http errors to avoid http client and server side erros..  ../blog results 404 error so added to ignore it.
         Document document = Jsoup.connect(url).ignoreHttpErrors(true).get();
 
         String[] contentArr = document.html().split(" ");

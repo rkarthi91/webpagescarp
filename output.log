@@ -1,0 +1,179 @@
+D:\workspace\java-spring\webpage>mvn clean install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------------< com.314e.test:webpage >------------------------
+[INFO] Building webpage 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ webpage ---
+[INFO] Deleting D:\workspace\java-spring\webpage\target
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ webpage ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as w
+hen copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven
+.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ webpage ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to D:\workspace\java-spring\webpage\target\classes
+[INFO] /D:/workspace/java-spring/webpage/src/main/java/com/e/test/webpage/CountFrequentWords1.java: D:\workspace\java-spring\webpage\src\main\java\com\e\test\webpa
+ge\CountFrequentWords1.java uses unchecked or unsafe operations.
+[INFO] /D:/workspace/java-spring/webpage/src/main/java/com/e/test/webpage/CountFrequentWords1.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ webpage ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory D:\workspace\java-spring\webpage\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ webpage ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ webpage ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ webpage ---
+[INFO] Building jar: D:\workspace\java-spring\webpage\target\webpage-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.4.0:repackage (repackage) @ webpage ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO]
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webpage ---
+[INFO] Installing D:\workspace\java-spring\webpage\target\webpage-0.0.1-SNAPSHOT.jar to C:\Users\BNPSTD1\.m2\repository\com\314e\test\webpage\0.0.1-SNAPSHOT\webpag
+e-0.0.1-SNAPSHOT.jar
+[INFO] Installing D:\workspace\java-spring\webpage\pom.xml to C:\Users\BNPSTD1\.m2\repository\com\314e\test\webpage\0.0.1-SNAPSHOT\webpage-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.223 s
+[INFO] Finished at: 2020-11-22T00:48:45+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\workspace\java-spring\webpage>mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------------< com.314e.test:webpage >------------------------
+[INFO] Building webpage 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:2.4.0:run (default-cli) > test-compile @ webpage >>>
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ webpage ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as w
+hen copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven
+.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ webpage ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ webpage ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory D:\workspace\java-spring\webpage\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ webpage ---
+[INFO] No sources to compile
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:2.4.0:run (default-cli) < test-compile @ webpage <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.4.0:run (default-cli) @ webpage ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.0)
+
+2020-11-22 00:48:54.283  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Starting CountFrequentWords using Java 1.8.0_251 on DESKTOP-PQ
+4TU8A with PID 15764 (D:\workspace\java-spring\webpage\target\classes started by BNPSTD1 in D:\workspace\java-spring\webpage)
+2020-11-22 00:48:54.291  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : No active profile set, falling back to default profiles: defau
+lt
+2020-11-22 00:48:54.870  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Started CountFrequentWords in 1.187 seconds (JVM running for 1
+.727)
+2020-11-22 00:48:57.374  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/contact-us/
+2020-11-22 00:48:57.678  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/client-testimonials/
+2020-11-22 00:48:57.967  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/big-data/
+2020-11-22 00:48:58.268  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/it-testing/
+2020-11-22 00:48:58.564  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/ehr-advisory-services/
+2020-11-22 00:48:58.873  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/custom-programming/
+2020-11-22 00:48:59.151  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/why-314e/
+2020-11-22 00:48:59.436  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/healthcare-it-staff-augmen
+tation/
+2020-11-22 00:48:59.727  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/blog/the-importance-of-test-cases-f
+or-uat-during-epic-implementation/
+2020-11-22 00:48:59.996  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/about-314e/industry-affiliations/
+2020-11-22 00:49:00.275  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/data-science-ai/
+2020-11-22 00:49:00.562  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/blog/less-is-more-questioning-the-v
+alue-of-abundant-ehr-interfaces/
+2020-11-22 00:49:00.852  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/products/muspell-cdr/
+2020-11-22 00:49:01.138  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/why-314e/apply-online/
+2020-11-22 00:49:01.418  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/optimization-and-upgrades/
+
+2020-11-22 00:49:01.707  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/314e-healthcare-blog/
+2020-11-22 00:49:01.989  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/ehr-implementation-service
+s/
+2020-11-22 00:49:02.273  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/business-intelligence/
+2020-11-22 00:49:02.582  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/digital-learning/
+2020-11-22 00:49:02.865  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/data-conversion-archival/
+2020-11-22 00:49:03.136  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/about-314e/
+2020-11-22 00:49:03.418  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/cures-act-payer-solutions/
+
+2020-11-22 00:49:03.696  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/blog/
+2020-11-22 00:49:03.962  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/managed-services/
+2020-11-22 00:49:04.243  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/blog/how-to-taper-down-support-afte
+r-epic-go-live/
+2020-11-22 00:49:04.524  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/about-314e/our-team/
+2020-11-22 00:49:04.812  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/products/speki-ehr-help/
+2020-11-22 00:49:05.092  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/cloud-adoption/
+2020-11-22 00:49:05.373  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/products/muspell-automaton/
+2020-11-22 00:49:05.655  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/cures-act-provider-solutio
+ns/
+2020-11-22 00:49:05.929  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/it-offshore-services/
+2020-11-22 00:49:06.216  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/training/
+2020-11-22 00:49:06.497  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/ehr-go-live-support/
+2020-11-22 00:49:06.785  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/success-stories/
+2020-11-22 00:49:07.068  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/services/ehr-interfaces/
+2020-11-22 00:49:07.361  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : Url - https://www.314e.com/blog/4-major-considerations-for-hea
+lthcare-data-conversion/
+2020-11-22 00:49:17.864  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : ----------- Single word Pair -----------------
+2020-11-22 00:49:17.896  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : <div - 11329
+2020-11-22 00:49:17.896  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : </div> - 6675
+2020-11-22 00:49:17.896  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : </div>
+ - 3946
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : .color_alternate - 3168
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : <li - 2791
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : class="menu-item - 2664
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-object-page - 2052
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-type-post_type - 2052
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : 0 - 1525
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : .no-touch - 1512
+2020-11-22 00:49:17.904  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : ----------- Two word Pair -----------------
+2020-11-22 00:49:17.944  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : class="menu-item menu-item-type-post_type - 2052
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-type-post_type menu-item-object-page - 2052
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : <div class="elementor-element - 1250
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : <div class="elementor-widget-container"> - 1250
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-object-page w-nav-item - 1082
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : w-nav-item level_3 - 828
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : class="w-nav-anchor level_3" - 828
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-type-custom menu-item-object-custom - 612
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : class="menu-item menu-item-type-custom - 612
+2020-11-22 00:49:17.952  INFO 15764 --- [           main] com.e.test.webpage.CountFrequentWords    : menu-item-object-custom menu-item-has-children - 586
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.346 s
+[INFO] Finished at: 2020-11-22T00:49:18+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\workspace\java-spring\webpage>
