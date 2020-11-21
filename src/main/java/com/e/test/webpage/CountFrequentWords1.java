@@ -25,9 +25,8 @@ public class CountFrequentWords1 implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        // Important point - You will have to assume that the maximum number of levels you have to expand for urls within a url as 4
+        // Important point mentioned in problem description - You will have to assume that the maximum number of levels you have to expand for urls within a url as 4
         // if we expand url's url in 4 times its very time consuming.. and problem is not very clear.. but check my sudo solution..
-
         ripWebContent(rootUrl, 4);
 
         // After populated word's repeated counts, sort highest and print top 10.
